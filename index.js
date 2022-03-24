@@ -1,4 +1,12 @@
-// https://www.ascii-code.com/
+/** 
+ * Charcode - https://www.ascii-code.com/
+ * Requirement 
+ * 
+ * - 4 sets of 15 characters 
+ * - 15 character comes from random number turned into string
+ * - Use 61-122 to exclude < symbol which causes bug when rendering
+ * 
+*/
 
 const generateBtn = document.querySelector('#generate-password')
 const passwordDisplay = document.querySelector('.password-results')
@@ -25,36 +33,3 @@ generateBtn.addEventListener('click',function(){
   passwordArray = []
 })
 
-
-
-
-
-
-
-
-
-
-
-
-/**
- * Requirement
- * 
- * - 15 random characters 
- * - push 15 loop of random letters 33 to 126 
- * 
- * function getRandomArbitrary(33, 126) {
-  return Math.random() * (126 - 33) + 33;
- * 
-
-  const charArray = []
-  const passwordArray =[]
-  function generatePassword(){
-    for (i<1;i<16;i++){
-      charArray.push(Math.random() * (126 - 33) + 33)
-    }
-    for (i<0;i<15;i++){
-      passwordArray[i] = String.fromCharCode(passwordArray[i])
-    }
-  }
- * 
- */
