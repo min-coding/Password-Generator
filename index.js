@@ -1,6 +1,5 @@
 // https://www.ascii-code.com/
 
-
 const generateBtn = document.querySelector('#generate-password')
 const passwordDisplay = document.querySelector('.password-results')
 let passwordArray = []
@@ -9,17 +8,13 @@ function generatePassword(){
   for (a=0;a<4;a++){
     const charArray = []
       for (i=0;i<15;i++){
-        const num = Math.floor(Math.random() * (122 - 35) + 35)
-        if(num !== 58,59,60,61,62){
+        const num = Math.floor(Math.random() * (122 - 61) + 61)
           const char = String.fromCharCode(num)
           charArray.push(char)
-        }
       }
     const password = charArray.join("")
     passwordArray.push(password)
-    console.log(password.length)
   }
-  console.log(passwordArray)
 }
 
 generateBtn.addEventListener('click',function(){
